@@ -79,33 +79,4 @@ st.line_chart(df[["mov_avg_open","Open"]])
 
 
 
-st.title("OHLC Candle Stick Graph")
-'------------------------------------------------------------------------------------------'
-
-ohlc_day= st.text_input("Enter number of days for Resampling for OHLC CandleStick Chart", "50")
-
-'You Enterted the Moving Average: ', ohlc_day
-
-# Resample to get open-high-low-close (OHLC) on every n days of data
-df_ohlc = df.Close.resample(ohlc_day+'D').ohlc() 
-df_volume = df.Volume.resample(ohlc_day+'D').sum()
-
-
-
-df_ohlc.reset_index(inplace=True)
-df_ohlc.Date = df_ohlc.Date.map(mdates.date2num)
-
-
-
-# Create and visualize candlestick charts
-plt.figure(figsize=(8,6))
-
-'OHLC Candle Stick Graph for '+ ohlc_day+ " Days"
-
-ax1 = plt.subplot2grid((6,1), (0,0), rowspan=5, colspan=1)
-ax1.xaxis_date()
-candlestick_ohlc(ax1, df_ohlc.values, width=2, colorup='g')
-plt.xlabel('Time')
-plt.ylabel('Stock Candle Sticks')
-st.pyplot()
 
