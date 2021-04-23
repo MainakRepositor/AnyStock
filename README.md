@@ -2,6 +2,8 @@
 
 A simple stock market analysis web application which is used to predict and vizualise stocks data of several Fortune 500 companies. This application uses Yahoo Finance API to feth real-time stocks data from global stocks market and perform modelling and visualizations in this web application.
 
+### Statutary Warning : These data do not guarantee real data of stock market (as they are confidential). So please don't invest using these insights.
+
 ### The website is hosted at :
 https://share.streamlit.io/mainakrepositor/stock/app.py
 
