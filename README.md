@@ -4,8 +4,8 @@ A simple stock market analysis web application which is used to predict and vizu
 
 ### Statutary Warning : These data do not guarantee real data of stock market (as they are confidential). So please don't invest using these insights.
 
-### The website is hosted at :
-https://share.streamlit.io/mainakrepositor/stock/app.py
+### The website is hosted: [here](https://share.streamlit.io/mainakrepositor/stock/app.py)
+
 
 ### Some Screen-shots
 
