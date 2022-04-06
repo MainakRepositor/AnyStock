@@ -22,7 +22,6 @@ import streamlit as st
 st.title('Stock Market App')
 '----------------------------------------------------------'
 #text
-st.write("Developed by Mainak Chaudhuri")
 
 image = Image.open(os.path.join('STOCK.jpg'))
 st.image(image)
