@@ -20,7 +20,7 @@ import streamlit as st
 
 #title
 st.title('Stock Market App')
-'---------------------------------------------------------'
+'----------------------------------------------------------'
 #text
 st.write("Developed by Mainak Chaudhuri")
 
