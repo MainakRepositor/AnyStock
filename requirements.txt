@@ -7,6 +7,6 @@ statsmodels
 pmdarima
 streamlit
 #sqlite3==3.35.4
-yfinance
+yfinance==0.2.28
 #matplotlib
 #warnings
