@@ -1,4 +1,4 @@
-numpy
+numpy==1.18.0
 pandas
 datetime
 sktime==0.4.1
