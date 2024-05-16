@@ -7,7 +7,7 @@ from preprocess import preprocessing
 #import matplotlib as mpl
 #import matplotlib.pyplot as plt
 import warnings
-from sklearn.metrics import mean_absolute_error, mean_squared_error
+
 warnings.filterwarnings("ignore")
 
 "# Stock Price Prediction"
@@ -234,18 +234,6 @@ else:
         with col2:
             st.write("SMAPE of Low : {}".format(smape_low))
 
-mae_high = mean_absolute_error(data_final['High'], data_final['Forecast_High'])
-mse_high = mean_squared_error(data_final['High'], data_final['Forecast_High'])
 
-# Calculate accuracy metrics for Low prices
-mae_low = mean_absolute_error(data_final['Low'], data_final['Forecast_Low'])
-mse_low = mean_squared_error(data_final['Low'], data_final['Forecast_Low'])
-
-# Display accuracy metrics
-st.write("Accuracy Metrics:")
-st.write("MAE for High: ", mae_high)
-st.write("MSE for High: ", mse_high)
-st.write("MAE for Low: ", mae_low)
-st.write("MSE for Low: ", mse_low)
 
 db.close()
