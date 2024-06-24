@@ -3,7 +3,7 @@ pandas
 datetime
 sktime
 scikit-learn
-statsmodels==0.14.0
+statsmodels
 pmdarima
 streamlit
 #sqlite3==3.35.4
