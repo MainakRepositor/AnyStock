@@ -8,7 +8,21 @@ from preprocess import preprocessing
 #import matplotlib.pyplot as plt
 import warnings
 
+def hide_github_icon():
+    hide_github_style = """
+        <style>
+        /* Hide the GitHub icon from the Streamlit app menu */
+        button[kind="header-button"] {
+            display: none;
+        }
+        </style>
+    """
+    st.markdown(hide_github_style, unsafe_allow_html=True)
+
+hide_github_icon()
+
 warnings.filterwarnings("ignore")
+
 
 "# Stock Price Prediction"
 "This is an app to predict the High and Low of the given Stock. You can select different stocks, intervals, periods from the sidebar. Feel free to experiment with different models"
