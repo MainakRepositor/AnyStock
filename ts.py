@@ -19,7 +19,7 @@ def hide_github_icon():
     """
     st.markdown(hide_github_style, unsafe_allow_html=True)
 
-hide_github_icon()
+
 
 warnings.filterwarnings("ignore")
 
@@ -50,18 +50,20 @@ query = "SELECT DISTINCT(Ticker) FROM tkrinfo WHERE Exchange = '" + choice_excha
 ticker_name = pd.read_sql_query(query, db)
 ticker_name = ticker_name.loc[0][0]
 
-# st.write("This is a nice country  ", choice_country)
-# st.write("It has exchange:,",choice_exchange)
-# st.write(choice_name)
+hide_github_icon()
 
-# get start date
-#start_date = st.sidebar.date_input("Start Date", value=datetime.date.today() - datetime.timedelta(days=30))
-#st.write(start_date)
+st.write("This is a nice country  ", choice_country)
+st.write("It has exchange:,",choice_exchange)
+st.write(choice_name)
+
+#get start date
+start_date = st.sidebar.date_input("Start Date", value=datetime.date.today() - datetime.timedelta(days=30))
+st.write(start_date)
 
 # get end date
-#end_date = st.sidebar.date_input("End Date", value=datetime.date.today())
-#st.write(end_date)
-#st.write(str(ticker_name))
+end_date = st.sidebar.date_input("End Date", value=datetime.date.today())
+st.write(end_date)
+st.write(str(ticker_name))
 
 # get interval
 interval = st.sidebar.selectbox("Interval", ['1d', '1wk', '1mo', '3mo'])
