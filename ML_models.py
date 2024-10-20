@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from sktime.forecasting.compose import ReducedRegressionForecaster
+from sktime.forecasting.compose import TransformedTargetForecaster
 from sktime.forecasting.model_selection import temporal_train_test_split
 from sktime.performance_metrics.forecasting import smape_loss
 from sklearn.linear_model import LinearRegression
@@ -15,7 +15,7 @@ def select_regressor(selection):
         'K-Nearest Neighbors': KNeighborsRegressor(),
         'Random Forest': RandomForestRegressor(),
         'Gradient Boosting': GradientBoostingRegressor(),
-       # 'XGBoost': XGBRegressor(verbosity=0),
+        'XGBoost': XGBRegressor(verbosity=0),
         'Support Vector Machines': LinearSVR(),
         'Extra Trees': ExtraTreesRegressor(),
     }
