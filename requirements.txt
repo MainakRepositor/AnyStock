@@ -1,9 +1,9 @@
-numpy==1.23.5         # Compatibility with sktime
-pandas>=1.1.0         # Ensure compatibility with sktime
-datetime              # Standard library, no version needed
-sktime==0.15.1        # Update sktime version, 0.4.1 is old and might not work
-scikit-learn>=0.24.0  # Ensure compatibility with sktime
-statsmodels>=0.12.0   # Update to a known working version
-pmdarima              # No version specified, usually works with defaults
-streamlit>=1.0        # Streamlit compatible version
-yfinance==0.2.28      # Your specific version of yfinance
+numpy==1.23.5
+pandas>=1.1.0
+datetime
+sktime==0.15.1           # Newer version of sktime that supports ReducedRegressionForecaster
+scikit-learn>=1.0.0      # Ensure compatibility with sktime and RandomForest
+statsmodels>=0.12.0
+pmdarima
+streamlit>=1.0
+yfinance==0.2.28
