@@ -232,11 +232,17 @@ else:
             st.write("SMAPE of High: {}".format(smap_high))
         with col2:
             st.write("SMAPE of Low : {}".format(smap_low))
-    elif model == 'AutoARIMA' or model=='Random Forest':
+    elif model == 'AutoARIMA':
         from SES import Auto_Arima
         st.write("Note: This model may take some time to fit")
         data_final = Auto_Arima(data,horizon)
         st.line_chart(data_final[['High', 'Forecast_High', 'Low', 'Forecast_Low']])
+    elif model=='Random Forest':
+        from SES import Auto_Arima
+        st.write("Note: This model may take some time to fit")
+        data_final = Auto_Arima(data,horizon)
+        st.line_chart(data_final[['High', 'Forecast_High', 'Low', 'Forecast_Low']])
+        
 
     else:
         from ML_models import forecast
