@@ -251,9 +251,9 @@ else:
     elif model=='Random Forest':
         col1, col2 = st.columns(2)
         with col1:
-            q_high = st.slider("Order of High", 1, 30, 1)
+            q_high = st.slider("Order of High", 1, 100, 5)
         with col2:
-            q_low = st.slider("Order of Low", 1, 30, 1)
+            q_low = st.slider("Order of Low", 1, 50, 5)
         from SES import AR_model
         data_final, smap_high, smap_low = AR_model(data, horizon, q_high, q_low)
         st.line_chart(data_final[['High', 'Forecast_High', 'Low', 'Forecast_Low']])
