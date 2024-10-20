@@ -232,16 +232,36 @@ else:
             st.write("SMAPE of High: {}".format(smap_high))
         with col2:
             st.write("SMAPE of Low : {}".format(smap_low))
+            
     elif model == 'AutoARIMA':
-        from SES import Auto_Arima
-        st.write("Note: This model may take some time to fit")
-        data_final = Auto_Arima(data,horizon)
+        col1, col2 = st.columns(2)
+        with col1:
+            q_high = st.slider("Order of High", 1, 30, 1)
+        with col2:
+            q_low = st.slider("Order of Low", 1, 30, 1)
+        from SES import AR_model
+        data_final, smap_high, smap_low = AR_model(data, horizon, q_high, q_low)
         st.line_chart(data_final[['High', 'Forecast_High', 'Low', 'Forecast_Low']])
+        col1, col2 = st.columns(2)
+        with col1:
+            st.write("SMAPE of High: {}".format(smap_high))
+        with col2:
+            st.write("SMAPE of Low : {}".format(smap_low))
+        
     elif model=='Random Forest':
-        from SES import Auto_Arima
-        st.write("Note: This model may take some time to fit")
-        data_final = Auto_Arima(data,horizon)
+        col1, col2 = st.columns(2)
+        with col1:
+            q_high = st.slider("Order of High", 1, 30, 1)
+        with col2:
+            q_low = st.slider("Order of Low", 1, 30, 1)
+        from SES import AR_model
+        data_final, smap_high, smap_low = AR_model(data, horizon, q_high, q_low)
         st.line_chart(data_final[['High', 'Forecast_High', 'Low', 'Forecast_Low']])
+        col1, col2 = st.columns(2)
+        with col1:
+            st.write("SMAPE of High: {}".format(smap_high))
+        with col2:
+            st.write("SMAPE of Low : {}".format(smap_low))
         
 
     else:
